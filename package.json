@@ -1,0 +1,53 @@
+{
+    "name": "next-ts-redux-saga",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env APP_ENV=dev next dev",
+        "build": "cross-env APP_ENV=dev next build",
+        "build-prod": "cross-env APP_ENV=prod next build",
+        "build-stag": "cross-env APP_ENV=stag next build",
+        "start": "next start",
+        "format": "prettier --write \"**/*.+(js|jsx|ts|json|css|md)\"",
+        "lint": "next lint",
+        "prepare": "is-ci || husky install",
+        "test": "echo \"Error: no test specified\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@git@github.com:thaind97git/next-ts-redux-saga.git"
+    },
+    "author": "thaind",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thaind97git/next-ts-redux-saga.git/issues"
+    },
+    "homepage": "https://github.com/thaind97git/next-ts-redux-saga.git#readme",
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.9.3",
+        "jwt-decode": "^3.1.2",
+        "next": "^13.2.2",
+        "next-redux-wrapper": "^8.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-redux": "^8.0.5",
+        "redux-injectors": "^2.1.0",
+        "redux-saga": "^1.2.2"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
+        "@next/eslint-plugin-next": "^13.3.0",
+        "@types/node": "18.15.11",
+        "@types/react": "^18.0.28",
+        "@typescript-eslint/eslint-plugin": "^5.57.1",
+        "@typescript-eslint/parser": "^5.57.1",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.35.0",
+        "eslint-plugin-react": "^7.32.2",
+        "husky": "^8.0.0",
+        "prettier": "^2.8.4",
+        "typescript": "4.9.5"
+    }
+}
