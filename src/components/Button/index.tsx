@@ -1,9 +1,10 @@
 import React from 'react'
+import { Button as MButton, ButtonProps as MButtonProps } from '@mui/material'
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends MButtonProps {
     children: React.ReactNode
 }
 
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
-    return <button {...props}>{children}</button>
+    return <MButton {...props}>{children}</MButton>
 }

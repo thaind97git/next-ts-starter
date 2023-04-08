@@ -27,6 +27,24 @@ const nextConfig = {
     images: loadImageConfig(),
     env: {
         APP_ENV: process.env.APP_ENV
+    },
+    transpilePackages: ['@mui/material', '@mui/icons-material', '@mui/styles', '@mui/lab', 'mdi-material-ui'],
+    modularizeImports: {
+        '@mui/material/?(((\\w*)?/?)*)': {
+            transform: '@mui/material/{{ matches.[1] }}/{{member}}'
+        },
+        '@mui/icons-material/?(((\\w*)?/?)*)': {
+            transform: '@mui/icons-material/{{ matches.[1] }}/{{member}}'
+        },
+        '@mui/styles': {
+            transform: '@mui/styles/{{member}}'
+        },
+        '@mui/lab': {
+            transform: '@mui/lab/{{member}}'
+        },
+        'mdi-material-ui': {
+            transform: 'mdi-material-ui/{{member}}'
+        }
     }
 }
 
